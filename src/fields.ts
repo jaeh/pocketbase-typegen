@@ -12,22 +12,23 @@ import { fieldNameToGeneric } from "./generics"
  * Convert the pocketbase field type to the equivalent typescript type
  */
 export const pbSchemaTypescriptMap = {
+  autodate: DATE_STRING_TYPE_NAME,
   // Basic fields
   bool: "boolean",
   date: DATE_STRING_TYPE_NAME,
-  autodate: DATE_STRING_TYPE_NAME,
   editor: HTML_STRING_NAME,
   email: "string",
-  text: "string",
-  url: "string",
-  password: "string",
-  number: "number",
-
   // Dependent on schema
   file: (fieldSchema: FieldSchema) =>
     fieldSchema.maxSelect && fieldSchema.maxSelect > 1 ? "string[]" : "string",
+
   json: (fieldSchema: FieldSchema) =>
     `null | ${fieldNameToGeneric(fieldSchema.name)}`,
+
+  number: "number",
+
+  password: "string",
+
   relation: (fieldSchema: FieldSchema) =>
     fieldSchema.maxSelect && fieldSchema.maxSelect === 1
       ? RECORD_ID_STRING_NAME
@@ -41,6 +42,8 @@ export const pbSchemaTypescriptMap = {
       ? `${valueType}[]`
       : valueType
   },
+  text: "string",
+  url: "string",
 
   // DEPRECATED: PocketBase v0.8 does not have a dedicated user relation
   user: (fieldSchema: FieldSchema) =>

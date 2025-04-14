@@ -7,9 +7,6 @@ describe("generate", () => {
       {
         createRule: null,
         deleteRule: null,
-        id: "123",
-        listRule: null,
-        name: "books",
         fields: [
           {
             id: "xyz",
@@ -20,6 +17,9 @@ describe("generate", () => {
             unique: false,
           },
         ],
+        id: "123",
+        listRule: null,
+        name: "books",
         system: false,
         type: "base",
         updateRule: null,
@@ -35,9 +35,6 @@ describe("generate", () => {
       {
         createRule: null,
         deleteRule: null,
-        id: "123",
-        listRule: null,
-        name: "books",
         fields: [
           {
             id: "xyz",
@@ -48,6 +45,9 @@ describe("generate", () => {
             unique: false,
           },
         ],
+        id: "123",
+        listRule: null,
+        name: "books",
         system: false,
         type: "base",
         updateRule: null,
@@ -65,9 +65,9 @@ describe("createRecordType", () => {
     const schema: FieldSchema[] = [
       {
         id: "hhnwjkke",
-        name: "title",
         max: null,
         min: null,
+        name: "title",
         pattern: "",
         required: false,
         system: false,
@@ -84,8 +84,8 @@ describe("createRecordType", () => {
     const schema: FieldSchema[] = [
       {
         id: "hhnwjkke",
-        name: "avatars",
         maxSelect: 2,
+        name: "avatars",
         required: false,
         system: false,
         type: "file",
@@ -130,15 +130,12 @@ describe("createResponseType", () => {
     const row: CollectionRecord = {
       createRule: null,
       deleteRule: null,
-      id: "123",
-      listRule: null,
-      name: "books",
       fields: [
         {
           id: "hhnwjkke",
-          name: "title",
           max: null,
           min: null,
+          name: "title",
           pattern: "",
           required: false,
           system: false,
@@ -146,6 +143,9 @@ describe("createResponseType", () => {
           unique: false,
         },
       ],
+      id: "123",
+      listRule: null,
+      name: "books",
       system: false,
       type: "base",
       updateRule: null,
@@ -161,8 +161,8 @@ describe("createResponseType", () => {
     const schema: FieldSchema[] = [
       {
         id: "hhnwjkke",
-        name: "avatars",
         maxSelect: 2,
+        name: "avatars",
         required: false,
         system: false,
         type: "file",

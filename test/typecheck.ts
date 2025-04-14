@@ -23,16 +23,16 @@ const thing = getOne(Collections.Everything, "a")
 
 // Works when passing in JSON generic
 const everythingRecordWithGeneric: EverythingRecord<{ a: "some string" }> = {
-  id: "abc",
   bool_field: true,
+  id: "abc",
   json_field: { a: "some string" },
   number_field: 1,
 }
 
 // Works without passing in JSON generic
 const everythingRecordWithoutGeneric: EverythingRecord = {
-  id: "abc",
   bool_field: true,
+  id: "abc",
   json_field: { a: "some string" },
   number_field: 1,
 }

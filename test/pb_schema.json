@@ -125,9 +125,7 @@
     },
     "passwordAuth": {
       "enabled": true,
-      "identityFields": [
-        "email"
-      ]
+      "identityFields": ["email"]
     },
     "mfa": {
       "enabled": false,
@@ -312,9 +310,7 @@
     },
     "passwordAuth": {
       "enabled": true,
-      "identityFields": [
-        "email"
-      ]
+      "identityFields": ["email"]
     },
     "mfa": {
       "enabled": false,
@@ -519,9 +515,7 @@
     },
     "passwordAuth": {
       "enabled": true,
-      "identityFields": [
-        "email"
-      ]
+      "identityFields": ["email"]
     },
     "mfa": {
       "enabled": false,
@@ -1020,9 +1014,7 @@
         "type": "autodate"
       }
     ],
-    "indexes": [
-      "CREATE INDEX `idx_77jkB2zihL` ON `base` (`created`)"
-    ],
+    "indexes": ["CREATE INDEX `idx_77jkB2zihL` ON `base` (`created`)"],
     "system": false
   },
   {

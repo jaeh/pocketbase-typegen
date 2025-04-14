@@ -110,8 +110,8 @@ describe("createTypeField", () => {
       createTypeField("test_collection", {
         ...defaultFieldSchema,
         name: "selectFieldWithOpts",
-        values: ["one", "two", "three"],
         type: "select",
+        values: ["one", "two", "three"],
       })
     ).toEqual(`\tselectFieldWithOpts: TestCollectionSelectFieldWithOptsOptions`)
   })
@@ -120,8 +120,8 @@ describe("createTypeField", () => {
     expect(
       createTypeField("test_collection", {
         ...defaultFieldSchema,
-        name: "selectField",
         maxSelect: 2,
+        name: "selectField",
         type: "select",
       })
     ).toEqual("\tselectField: string[]")
@@ -131,10 +131,10 @@ describe("createTypeField", () => {
     expect(
       createTypeField("test_collection", {
         ...defaultFieldSchema,
-        name: "selectFieldWithOpts",
         maxSelect: 2,
-        values: ["one", "two", "three"],
+        name: "selectFieldWithOpts",
         type: "select",
+        values: ["one", "two", "three"],
       })
     ).toEqual(
       `\tselectFieldWithOpts: TestCollectionSelectFieldWithOptsOptions[]`
@@ -175,8 +175,8 @@ describe("createTypeField", () => {
     expect(
       createTypeField("test_collection", {
         ...defaultFieldSchema,
-        name: "fileField",
         maxSelect: 3,
+        name: "fileField",
         type: "file",
       })
     ).toEqual("\tfileField: string[]")
@@ -196,8 +196,8 @@ describe("createTypeField", () => {
     expect(
       createTypeField("test_collection", {
         ...defaultFieldSchema,
-        name: "relationFieldMany",
         maxSelect: 3,
+        name: "relationFieldMany",
         type: "relation",
       })
     ).toEqual("\trelationFieldMany: RecordIdString[]")
@@ -207,8 +207,8 @@ describe("createTypeField", () => {
     expect(
       createTypeField("test_collection", {
         ...defaultFieldSchema,
-        name: "relationFieldMany",
         maxSelect: null,
+        name: "relationFieldMany",
         type: "relation",
       })
     ).toEqual("\trelationFieldMany: RecordIdString[]")
@@ -245,11 +245,11 @@ describe("createSelectOptions", () => {
       {
         id: "hhnwjkke",
         name: "title",
-        values: ["one", "one", "two", "space space", "$@#*(&#%"],
         required: false,
         system: false,
         type: "select",
         unique: false,
+        values: ["one", "one", "two", "space space", "$@#*(&#%"],
       },
     ]
     const result = createSelectOptions(name, schema)

@@ -65,11 +65,11 @@ describe("getOptionValues", () => {
     const fieldWithValues: FieldSchema = {
       id: "1",
       name: "myfield",
-      values: ["one", "one", "one", "two"],
       required: false,
       system: false,
       type: "text",
       unique: false,
+      values: ["one", "one", "one", "two"],
     }
     expect(getOptionValues(fieldWithValues)).toEqual(["one", "two"])
   })
